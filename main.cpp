@@ -1,5 +1,6 @@
 #include "darray.hpp"
 #include "stack.hpp"
+#include "doubly-linkedlist.hpp"
 
 #include <iostream>
 
@@ -26,4 +27,25 @@ int main() {
         std::cout << sst.size() << " " << sst.peek() << " | ";
         a++;
     }
+
+
+    doublyLL<int> ls;
+    for (int i = 1; i<=1000; i++)
+    {
+        ls.push_back(i);
+    }
+    ls.printls();
+
+    std::cout << "head: "<< ls.a()->data << " tail: " << ls.Tail() << std::endl;
+
+    doublyLL<std::string> lss;
+    std::string str{};
+    for (int i=0; i<=25; i++){
+            char c = 97+i;
+            str += c;
+            lss.push_back(str);
+    }
+    lss.printls();
+    lss.clear();
+    lss.printls();
 }
