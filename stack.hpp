@@ -26,6 +26,7 @@ class Stack {
     T peek();
     size_t size();
     bool empty();
+    T printst();
 
 };
 
